@@ -13,6 +13,13 @@ var setName = function (user, fullName){
     return user;
 }
 
-module.exports.add = add;
-module.exports.square = square;
-module.exports.setName = setName;
+var asyncAdd = function (a, b, callback) {
+    setTimeout( callback(a + b), 2500)
+}
+
+module.exports = {
+    add,
+    square,
+    setName,
+    asyncAdd
+};
